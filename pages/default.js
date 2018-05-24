@@ -21,8 +21,8 @@ class DefaultPage extends React.Component {
           <h1>{ this.props.page.title }</h1>
           <div dangerouslySetInnerHTML={{ __html: this.props.page.content }}></div>
           <Nav />
-          <Footer />
         </div>
+        <Footer />
       </div>
 		);
 	}
