@@ -1,0 +1,23 @@
+{
+  "name": "react-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cosmicjs": "^3.2.7",
+    "express": "^4.16.3",
+    "next": "^6.0.3",
+    "next-routes": "^1.4.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "import": "node ./scripts/import.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
