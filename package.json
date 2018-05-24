@@ -14,6 +14,7 @@
   "devDependencies": {},
   "scripts": {
     "dev": "node server.js",
+    "develop": "npm run dev",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "import": "node ./scripts/import.js"
