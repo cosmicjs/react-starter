@@ -4,7 +4,7 @@ React starter app powered by [Cosmic JS](https://cosmicjs.com) 🚀
 ## Installation
 Install via the [Cosmic CLI](https://github.com/cosmicjs/cosmic-cli).
 ```bash
-npm i cosmic-cli -g
+npm i -g cosmic-cli
 
 # Login to your Cosmic JS account
 cosmic login
