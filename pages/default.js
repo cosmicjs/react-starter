@@ -1,6 +1,8 @@
 import React from 'react'
 import Router from 'next/router'
 import bucket from '../config'
+import Page from '../components/page'
+import PageNotFound from '../components/404'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Nav from '../components/nav'
@@ -9,8 +11,16 @@ class DefaultPage extends React.Component {
     let slug = query.slug
     if (!slug)
       slug = 'home'
-    const res = await bucket.getObject({ slug })
-    const page = res.object
+    let page
+    try {
+      const res = await bucket.getObject({ slug })
+      page = res.object
+    } catch(e) {
+      page = {
+        title: 'Page not found',
+        component: '404'
+      }
+    }
     return { page }
   }
 	render() {
@@ -18,8 +28,11 @@ class DefaultPage extends React.Component {
       <div>
         <Header page={ this.props.page }/>
         <div className="main">
-          <h1>{ this.props.page.title }</h1>
-          <div dangerouslySetInnerHTML={{ __html: this.props.page.content }}></div>
+          {this.props.page.component && this.props.page.component==='404' ? (
+            <PageNotFound />
+          ) : (
+            <Page page={this.props.page} />
+          )}
           <Nav />
         </div>
         <Footer />
