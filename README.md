@@ -14,3 +14,5 @@ cosmic init react-starter
 cd react-starter
 cosmic start
 ```
+## [React CMS](https://cosmicjs.com/knowledge-base/react-cms)
+Cosmic JS offers a [Headless CMS](https://cosmicjs.com/headless-cms) used to power content for your React websites and apps.
