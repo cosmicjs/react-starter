@@ -17,7 +17,7 @@
     "dev": "node server.js",
     "develop": "npm run dev",
     "build": "next build",
-    "start": "npm run build; cross-env NODE_ENV=production node server.js",
+    "start": "npm run build && cross-env NODE_ENV=production node server.js",
     "import": "node ./scripts/import.js"
   },
   "author": "",
