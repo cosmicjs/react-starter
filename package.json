@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "cosmicjs": "^3.2.7",
+    "cross-env": "^5.2.0",
     "express": "^4.16.3",
     "next": "^6.0.3",
     "next-routes": "^1.4.2",
@@ -16,7 +17,7 @@
     "dev": "node server.js",
     "develop": "npm run dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "npm run build; cross-env NODE_ENV=production node server.js",
     "import": "node ./scripts/import.js"
   },
   "author": "",
